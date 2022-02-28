@@ -84,5 +84,10 @@ namespace CanWeFixItService
 
             _connection.Execute(createMarketData);
         }
+
+        public void CloseDatabase()
+        {
+            _connection.Close();
+        }
     }
 }

@@ -8,5 +8,6 @@ namespace CanWeFixItService
         Task<IEnumerable<Instrument>> Instruments();
         Task<IEnumerable<MarketData>> MarketData();
         void SetupDatabase();
+        void CloseDatabase();
     }
 }
