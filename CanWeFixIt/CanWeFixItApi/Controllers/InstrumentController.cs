@@ -18,8 +18,9 @@ namespace CanWeFixItApi.Controllers
         
         // GET
         public async Task<ActionResult<IEnumerable<Instrument>>> Get()
-        {   
-            return Ok(_database.Instruments().Result);
+        {
+            var result = await _database.Instruments();
+            return Ok(result);
         }
     }
 }
